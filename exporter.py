@@ -2,13 +2,13 @@
 import xlrd
 import json
 
-loc = ("pdf1.xlsx")
+loc = ("googlesheet.xlsx")
 
 wb = xlrd.open_workbook(loc)
 sheet = wb.sheet_by_index(0)
 sheet.cell_value(0, 0)
 csv_list = []
-for row in range(1,23):
+for row in range(1,10):
     print("Row number: " + str(row))
     print(sheet.row_values(row))
     csv_list.append(sheet.row_values(row))
