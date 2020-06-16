@@ -24,7 +24,7 @@ def write_fillable_pdf(data_dict, row, input_pdf_path='setup.pdf', output_pdf_pa
                         annotation.update(
                             pdfrw.PdfDict(V='{}'.format(data_dict[str(a)][key]))
                         )
-        pdfrw.PdfWriter().write(output_pdf_path.format(row), template_pdf)
+        pdfrw.PdfWriter().write(output_pdf_path.format(data_dict["0"]["0"]), template_pdf)
 
 for row_number, data in enumerate(dataset):
     with open('fields.json', 'r') as f:
